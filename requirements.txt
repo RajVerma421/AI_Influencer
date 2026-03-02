@@ -1,0 +1,26 @@
+pandas
+numpy
+# Langchain:
+langchain
+langchain-core
+langchain-community
+
+# Google gemini(PaLM) Integration
+langchain-google-genai
+google-generativeai
+
+# Hugging Face
+langchain-huggingface
+transformers
+huggingface-Hub
+tensorflow
+sentence-transformers
+
+# Envirnoment Variable Management
+python-dotenv
+
+# Flask
+flask
+
+# gtts for text to audio
+gtts
