@@ -75,3 +75,12 @@ function copyToClipboard() {
         });
     }
 }
+
+function togglePassword(button) {
+    const wrapper = button.closest('.password-wrapper');
+    const input = wrapper.querySelector('input[type="password"], input[type="text"]');
+    const isPassword = input.type === 'password';
+    
+    input.type = isPassword ? 'text' : 'password';
+    button.classList.toggle('active', isPassword);
+}

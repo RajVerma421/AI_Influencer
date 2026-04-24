@@ -1049,6 +1049,51 @@ body {
     color: var(--text-light);
 }
 
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper .auth-input {
+    padding-right: 50px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+}
+
+.password-toggle:hover {
+    color: var(--text);
+}
+
+.password-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+.password-toggle .eye-closed {
+    display: none;
+}
+
+.password-toggle.active .eye-open {
+    display: none;
+}
+
+.password-toggle.active .eye-closed {
+    display: block;
+}
+
 .auth-btn {
     width: 100%;
     padding: 16px;
@@ -1247,4 +1292,12 @@ body {
     .form-grid {
         grid-template-columns: 1fr;
     }
+    
+    .auth-card {
+        padding: 32px 24px;
+    }
+}
+
+.auth-form .password-wrapper {
+    width: 100%;
 }

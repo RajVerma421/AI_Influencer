@@ -155,10 +155,10 @@ def login():
         return redirect(url_for('home'))
     
     if request.method == 'POST':
-        email = request.form.get('email')
+        username = request.form.get('username')
         password = request.form.get('password')
         
-        user = User.query.filter_by(email=email).first()
+        user = User.query.filter_by(username=username).first()
         if user and bcrypt.check_password_hash(user.password, password):
             if not user.is_active:
                 flash('Your account has been deactivated. Contact support.', 'danger')
@@ -171,7 +171,7 @@ def login():
             flash(f'Welcome back, {user.username}!', 'success')
             return redirect(next_page) if next_page else redirect(url_for('home'))
         else:
-            flash('Invalid email or password.', 'danger')
+            flash('Invalid username or password.', 'danger')
     
     return render_template('login.html')
 
